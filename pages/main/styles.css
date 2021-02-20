@@ -21,9 +21,42 @@ html, body{
 }
 
 .topbar{
-  background-color: rgb(133, 131, 130);
   grid-area: topbar;
-  border: 2px solid red;
+  color: rgb(200, 30, 13);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.blank, .title, .finish{
+  width: 33.3%;
+}
+
+.title{
+  text-align: center;
+}
+
+.finish{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button{
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.button:hover>div{
+  background-color: rgb(161, 18, 5);
+}
+
+.button>div{
+  background-color: rgb(200, 30, 13);
+  width: fit-content;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 .main{
@@ -35,6 +68,25 @@ html, body{
 
 .filter{
   background-color: aliceblue;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category{
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+.category>div{
+  background-color: rgb(39, 87, 167);
+  width: auto;
+}
+
+.category:hover>div{
+  background-color: rgb(66, 123, 223);
 }
 
 .product-item{
