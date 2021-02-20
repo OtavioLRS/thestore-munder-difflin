@@ -1,7 +1,13 @@
+@font-face {
+  font-family: 'TypewriterRegular';
+  src: url(./../../font/American\ Typewriter\ Regular\ 400.ttf);
+}
+
 *{
   margin: 0;
   padding: 0;
   transition: 0.3s;
+  font-family: 'TypewriterRegular';
 }
 
 html, body{
@@ -26,18 +32,14 @@ html, body{
 }
 
 .main{
-  background-color: rgb(177, 174, 175);
+  background-color: pink;
   grid-area: main;
-  /* border: 2px solid rgb(0, 255, 0); */
+  border: 2px solid rgb(0, 255, 0);
   overflow-y: scroll;
 }
 
 #shipping {
-  font-size: large;
-}
-
-.filter{
-  background-color: aliceblue;
+  font-family: 'TypewriterRegular';
 }
 
 .product-item{
