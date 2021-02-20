@@ -38,13 +38,19 @@ html, body{
   overflow-y: scroll;
 }
 
-#shipping {
-  font-family: 'TypewriterRegular';
-}
-
 .product-item{
   background-color: black;
   width: calc(100% - 20px);
   height: 200px;
   margin: 10px;
+}
+
+.addressContainer {
+  display: block;
+  justify-content: center;
+  align-content: center;
+}
+
+#addressTitle {
+  margin-bottom: 10px;
 }
