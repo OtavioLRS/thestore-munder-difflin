@@ -1,7 +1,13 @@
+@font-face {
+  font-family: 'TypewriterRegular';
+  src: url(./../../font/American\ Typewriter\ Regular\ 400.ttf);
+}
+
 *{
   margin: 0;
   padding: 0;
   transition: 0.3s;
+  font-family: 'TypewriterRegular';
 }
 
 html, body{
@@ -14,10 +20,9 @@ html, body{
   width: 100%;
   height: 100%;
   grid-template-areas: 
-  "topbar topbar"
-  "filter main";
-  grid-template-rows: 15% 85%;
-  grid-template-columns: 20% 80%;
+  "topbar"
+  "main";
+  grid-template-rows: 10% 90%;
 }
 
 .topbar{
@@ -31,10 +36,6 @@ html, body{
   grid-area: main;
   border: 2px solid rgb(0, 255, 0);
   overflow-y: scroll;
-}
-
-.filter{
-  background-color: aliceblue;
 }
 
 .product-item{
