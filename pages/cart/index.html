@@ -1,34 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <link rel="stylesheet" href="styles.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carrinho</title>
-</head>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho</title>
+  </head>
 
-<body>
-  <div class="container">
-    <div class="topbar">Topbar</div>
-    <div class="main">
-
-      <div class="addressContainer">
-        <h2 id="addressTitle">Endereço de entrega</h2>
-
-        <label for="address">Endereço</label>
-        <input id="address">
-
-        <label for="number">Número</label>
-        <input id="number">
-
-        <label for="postalCode">CEP</label>
-        <input id="postalCode">
+  <body>
+    <div class="container">
+      <div class="topbar">
+        <div class="back">
+          <a href="../main/index.html" class="button">
+            <div><i class="fas fa-arrow-left"></i> voltar</div>
+          </a>
+        </div>
+        <div class="title" title="Is this a The Office reference?">
+          <h1>the store</h1>
+        </div>
+        <div class="finish">
+          <a href="../sellDetails/index.html" class="button">
+            <div><i class="fas fa-shopping-cart"></i> finalizar compra</div>
+          </a>
+        </div>
       </div>
+      <div class="main">
 
+        <div class="addressContainer">
+          <h2 id="addressTitle">endereço de entrega</h2>
+
+          <label for="address">endereço</label>
+          <input id="address">
+
+          <label for="number">número</label>
+          <input id="number">
+
+          <label for="postalCode">CEP</label>
+          <input id="postalCode">
+        </div>
+
+      </div>
     </div>
-  </div>
-  <script src="../../script.js"></script>
-</body>
+    <script src="https://kit.fontawesome.com/86c1432663.js" crossorigin="anonymous"></script>
+    <script src="../../script.js"></script>
+  </body>
 
 </html>

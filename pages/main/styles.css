@@ -1,103 +1,270 @@
 @font-face {
   font-family: 'TypewriterRegular';
-  src: url(./../../font/American\ Typewriter\ Regular\ 400.ttf);
+  src: url(./../../assets/font/American\ Typewriter\ Regular\ 400.ttf);
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   transition: 0.3s;
   font-family: 'TypewriterRegular';
+  text-transform: lowercase;
 }
 
-html, body{
+html, body {
   width: 100%;
   height: 100%;
 }
 
-.container{
+.container {
   display: grid;
   width: 100%;
   height: 100%;
-  grid-template-areas: 
-  "topbar topbar"
-  "filter main";
+  grid-template-areas: "topbar topbar" "filter main";
   grid-template-rows: 10% 90%;
   grid-template-columns: 20% 80%;
 }
 
-.topbar{
+.topbar {
   grid-area: topbar;
   color: rgb(200, 30, 13);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  position: relative;
+  box-shadow: 0px 4px 4px rgb(63, 63, 63);
 }
 
-.blank, .title, .finish{
+.topbar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.blank, .title, .finish {
   width: 33.3%;
 }
 
-.title{
+.title {
   text-align: center;
+  font-size: 25px;
 }
 
-.finish{
+.title>h1 {
+  transition: 0s;
+}
+
+.title>h1:hover {
+  text-shadow: 1px 2px 1px black;
+  cursor: pointer;
+}
+
+.finish {
   display: flex;
   justify-content: flex-end;
 }
 
-.button{
+.button {
   color: white;
   text-decoration: none;
   font-weight: 700;
+  letter-spacing: 2px;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
 }
 
-.button:hover>div{
+.button i {
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+.button:hover>div {
   background-color: rgb(161, 18, 5);
 }
 
-.button>div{
+.button>div {
+  display: flex;
   background-color: rgb(200, 30, 13);
   width: fit-content;
-  padding: 20px;
+  padding: 15px;
   border-radius: 5px;
+  justify-content: center;
 }
 
-.main{
-  background-color: pink;
+.main {
+  background-color: rgb(255, 237, 232);
   grid-area: main;
-  border: 2px solid rgb(0, 255, 0);
   overflow-y: scroll;
+  display: flex;
+  justify-content: center;
 }
 
-.filter{
-  background-color: aliceblue;
+.filter {
+  background-color: rgb(244, 244, 255);
   padding: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.category{
+.options {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.search {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.search-input {
+  width: 70%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 0 10px;
+}
+
+.search-button>div {
+  padding: 10px;
+}
+
+#price-filter {
+  padding: 10px;
+  outline: none;
+  width: 100%;
+}
+
+#price-filter>option {
+  text-transform: uppercase;
+}
+
+#price-filter>option:first-child, #price-filter>option:last-child {
+  text-transform: lowercase;
+}
+
+.categories {
+  width: 100%;
+}
+
+.category {
   width: 100%;
   text-align: center;
   margin: 0;
 }
 
-.category>div{
-  background-color: rgb(39, 87, 167);
+.category>div {
   width: auto;
+  margin-bottom: 10px;
 }
 
-.category:hover>div{
-  background-color: rgb(66, 123, 223);
+.products {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
-.product-item{
-  background-color: black;
-  width: calc(100% - 20px);
-  height: 200px;
+.product {
+  border-radius: 5px;
+  background-color: white;
+  width: calc(33.3% - 40px);
+  height: 455px;
   margin: 10px;
+  position: relative;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-img {
+  width: 100%;
+  height: 60%;
+  border-bottom: 1px solid rgb(243, 243, 243);
+  padding-bottom: 20px;
+}
+
+.product-img>img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.product-categories {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.product-category {
+  padding: 3px;
+  background-color: rgb(200, 30, 13);
+  border-radius: 5px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.product-body {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-text {
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-name {
+  width: 60%;
+}
+
+.product-price {
+  text-transform: uppercase;
+  text-align: right;
+  font-weight: 700;
+  font-size: 20px;
+  display: flex;
+  justify-content: flex-end;
+  width: 40%;
+}
+
+.product-price>span {
+  font-size: 13px;
+  margin-top: 1px;
+}
+
+.product-button {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+#easterEgg {
+  font-size: xx-small;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  color: white;
+}
+
+#easterEgg:hover {
+  color: rgb(200, 30, 13);
+  cursor: not-allowed;
 }

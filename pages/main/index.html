@@ -5,36 +5,58 @@
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mundler Difflin</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../../assets/img/favi.ico">
+    <title>the store</title>
   </head>
 
-  <body>
+  <body onload="readItens()">
     <div class="container">
       <div class="topbar">
-        <div class="blank"></div>
-        <div class="title">
-          <h1>THE STORE</h1>
+        <div class="blank">
+          <p id="easterEgg">Talvez estejamos viciados em The Office...</p>
+        </div>
+        <div class="title" title="Is this a The Office reference?">
+          <h1>the store</h1>
         </div>
         <div class="finish">
-          <a href="../sellingDetails/index.html" class="button">
-            <div>Finalizar compra</div>
+          <a href="../cart/index.html" class="button">
+            <div><i class="fas fa-shopping-cart" style="margin: 0;"></i></div>
           </a>
         </div>
       </div>
       <div class="filter">
-        <a href="" class="category button">
-          <div>Todos</div>
+        <div class="options">
+          <div class="search">
+            <input type="text" class="search-input">
+            <a class="search-button button">
+              <div>
+                <i class="fas fa-search" style="margin: 0;"></i>
+              </div>
+            </a>
+          </div>
+          <select name="" id="price-filter">
+            <option value="0">Todos os preços</option>
+            <option value="1">R$ 0,00 - R$ 99,99</option>
+            <option value="2">R$ 100,00 - R$ 199,99</option>
+            <option value="3">R$ 200,00 - R$ 299,99</option>
+            <option value="4">R$ 300,00 - R$ 399,99</option>
+            <option value="5">R$ 400,00 - R$ 10000,00</option>
+          </select>
+        </div>
+        <div class="categories">
+          <a href="" class="category button">
+            <div>todos</div>
+          </a>
+        </div>
         </a>
       </div>
       <div class="main">
-        <div class="product-item"></div>
-        <div class="product-item"></div>
-        <div class="product-item"></div>
-        <div class="product-item"></div>
+        <div class="products">
+        </div>
       </div>
     </div>
-    </div>
-    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/86c1432663.js" crossorigin="anonymous"></script>
+    <script src="../../script.js"></script>
   </body>
 
 </html>

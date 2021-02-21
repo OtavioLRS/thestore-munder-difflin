@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'TypewriterRegular';
-  src: url(./../../font/American\ Typewriter\ Regular\ 400.ttf);
+  src: url(./../../assets/font/American\ Typewriter\ Regular\ 400.ttf);
 }
 
 *{
@@ -25,10 +25,60 @@ html, body{
   grid-template-rows: 10% 90%;
 }
 
-.topbar{
-  background-color: rgb(133, 131, 130);
+.topbar {
   grid-area: topbar;
-  border: 2px solid red;
+  color: rgb(200, 30, 13);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.back, .title, .finish {
+  width: 33.3%;
+}
+
+.title {
+  text-align: center;
+  font-size: 25px;
+}
+
+.title>h1 {
+  transition: 0s;
+}
+
+.title>h1:hover {
+  text-shadow: 1px 2px 1px black;
+  cursor: pointer;
+}
+
+.finish {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.button i {
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+.button:hover>div {
+  background-color: rgb(161, 18, 5);
+}
+
+.button>div {
+  background-color: rgb(200, 30, 13);
+  width: fit-content;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
 }
 
 .main{

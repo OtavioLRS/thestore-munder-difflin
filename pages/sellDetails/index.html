@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <link rel="stylesheet" href="styles.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resumo da Compra</title>
-</head>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo da compra</title>
+  </head>
 
-<body onload="generateShipping()">
-  <div class="container">
-    <div class="topbar">Topbar</div>
-    <div class="main">
-      <h2 id="shipping"></h2>
+  <body onload="generateShipping()">
+    <div class="container">
+      <div class="topbar">
+        <div class="blank"></div>
+        <div class="title" title="Is this a The Office reference?">
+          <h1>the store</h1>
+        </div>
+        <div class="finish">
+          <a href="../main/index.html" class="button">
+            <div><i class="fas fa-arrow-left" style="margin-right: 10px;"></i> retornar a home</div>
+          </a>
+        </div>
+      </div>
+      <div class="main">
+        <h2 id="shipping"></h2>
+      </div>
     </div>
-  </div>
-  <script src="../../script.js"></script>
-</body>
+    <script src="https://kit.fontawesome.com/86c1432663.js" crossorigin="anonymous"></script>
+    <script src="../../script.js"></script>
+  </body>
 
 </html>
