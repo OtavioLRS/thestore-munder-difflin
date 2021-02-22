@@ -1,0 +1,1 @@
+Por favor, comece pela página main :^)

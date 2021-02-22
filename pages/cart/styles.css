@@ -3,25 +3,23 @@
   src: url(./../../assets/font/American\ Typewriter\ Regular\ 400.ttf);
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   transition: 0.3s;
   font-family: 'TypewriterRegular';
 }
 
-html, body{
+html, body {
   width: 100%;
   height: 100%;
 }
 
-.container{
+.container {
   display: grid;
   width: 100%;
   height: 100%;
-  grid-template-areas: 
-  "topbar"
-  "main";
+  grid-template-areas: "topbar" "main";
   grid-template-rows: 10% 90%;
 }
 
@@ -32,6 +30,8 @@ html, body{
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  position: relative;
+  box-shadow: 0px 4px 4px rgb(63, 63, 63);
 }
 
 .back, .title, .finish {
@@ -81,26 +81,152 @@ html, body{
   display: flex;
 }
 
-.main{
+.main {
   background-color: pink;
   grid-area: main;
-  border: 2px solid rgb(0, 255, 0);
-  overflow-y: scroll;
+  display: flex;
 }
 
-.product-item{
+.product-item {
   background-color: black;
   width: calc(100% - 20px);
   height: 200px;
   margin: 10px;
 }
 
-.addressContainer {
-  display: block;
-  justify-content: center;
-  align-content: center;
+.address-container {
+  background-color: rgb(244, 244, 255);
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
 }
 
-#addressTitle {
+#address-title {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.address-input {
+  width: 75%;
+  height: 25px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 0 10px;
   margin-bottom: 10px;
+}
+
+#number {
+  width: 25%
+}
+
+#postal-code {
+  width: 50%;
+}
+
+#city {
+  width: 60%;
+}
+
+.products-container {
+  /* background-color: rgb(255, 237, 232); */
+  background-color: pink;
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  overflow-y: scroll;
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.card {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  overflow: hidden;
+  height: fit-content;
+  border: 1px solid black;
+}
+
+.product-container {
+  background-color: aliceblue;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  width: calc(100% - 40px);
+  height: 100px;
+  border-bottom: 1px solid black;
+}
+
+.product-container:last-child {
+  border: none;
+}
+
+.product-img {
+  width: 10%;
+  height: 100%;
+  margin-right: 10px;
+  border-bottom: 1px solid rgb(243, 243, 243);
+}
+
+.product-img>img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.product-info {
+  width: 100%;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: row;
+  width: 75%;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: x-large;
+}
+
+.amount-controller {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 25%
+}
+
+.price-final {
+  width: 255%;
+  margin-left: 15px;
+}
+
+.amount-controller>.button>div {
+  padding: 0 10px;
+  margin: 0 5px;
+}
+
+#final_price {
+  display: flex;
+  justify-content: space-between;
+  font-size: x-large;
+}
+
+.total_price_title {
+  width: 90%;
+}
+
+.total_price {
+  width: 25%;
 }

@@ -5,14 +5,15 @@
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrinho</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../../../assets/img/favi.ico">
+    <title>carrinho</title>
   </head>
 
-  <body>
+  <body onload="addCartItens()">
     <div class="container">
       <div class="topbar">
         <div class="back">
-          <a href="../main/index.html" class="button">
+          <a href="../main/" class="button">
             <div><i class="fas fa-arrow-left"></i> voltar</div>
           </a>
         </div>
@@ -20,30 +21,40 @@
           <h1>the store</h1>
         </div>
         <div class="finish">
-          <a href="../sellDetails/index.html" class="button">
+          <a href="../sellDetails/" id="end-sell-button" class="button">
             <div><i class="fas fa-shopping-cart"></i> finalizar compra</div>
           </a>
         </div>
       </div>
       <div class="main">
 
-        <div class="addressContainer">
-          <h2 id="addressTitle">endereço de entrega</h2>
+        <div class="address-container">
+          <h2 id="address-title">dados de entrega</h2>
+
+          <label for="name">nome do destinatário</label>
+          <input class="address-input" id="name">
 
           <label for="address">endereço</label>
-          <input id="address">
+          <input class="address-input" id="address">
 
           <label for="number">número</label>
-          <input id="number">
+          <input class="address-input" id="number">
 
-          <label for="postalCode">CEP</label>
-          <input id="postalCode">
+          <label for="city">cidade</label>
+          <input class="address-input" id="city">
+
+          <label for="postal-code">CEP</label>
+          <input class="address-input" id="postal-code">
+
         </div>
 
+        <div class=" products-container">
+          <div class="card"></div>
+        </div>
       </div>
-    </div>
-    <script src="https://kit.fontawesome.com/86c1432663.js" crossorigin="anonymous"></script>
-    <script src="../../script.js"></script>
+      <script src="https://kit.fontawesome.com/86c1432663.js" crossorigin="anonymous"></script>
+      <script src="../../itens.js"></script>
+      <script src="script.js"></script>
   </body>
 
 </html>

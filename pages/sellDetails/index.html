@@ -5,10 +5,11 @@
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../assets/img/favi.ico">
     <title>Resumo da compra</title>
   </head>
 
-  <body onload="generateShipping()">
+  <body>
     <div class="container">
       <div class="topbar">
         <div class="blank"></div>
@@ -16,17 +17,31 @@
           <h1>the store</h1>
         </div>
         <div class="finish">
-          <a href="../main/index.html" class="button">
+          <a href="../main/" class="button">
             <div><i class="fas fa-arrow-left" style="margin-right: 10px;"></i> retornar a home</div>
           </a>
         </div>
       </div>
       <div class="main">
-        <h2 id="shipping"></h2>
+        <div class="card">
+          <h1 class="card-title">pedido realizado!</h1>
+          <div class="infos">
+            <h2 class="card-title">produtos comprados:</h2>
+            <div class="card-products">
+
+            </div>
+
+            <div class="user-data">
+              <h2 class="card-title">dados de entrega:</h2>
+            </div>
+          </div>
+          <h3 id="shipping" class=""></h3>
+        </div>
       </div>
     </div>
     <script src="https://kit.fontawesome.com/86c1432663.js" crossorigin="anonymous"></script>
-    <script src="../../script.js"></script>
+    <script src="../../itens.js"></script>
+    <script src="script.js"></script>
   </body>
 
 </html>
